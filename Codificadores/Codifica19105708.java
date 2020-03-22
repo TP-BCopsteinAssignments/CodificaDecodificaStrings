@@ -5,16 +5,19 @@ public class Codifica19105708 implements Codifica {
     private static int deslc = 1;
 
     @Override
+    // Retorna o nome do autor
     public String getNomeAutor() {
         return "João Vítor Lioti Nunes";
     }
 
     @Override
+    // Retorna a matrícula do autor
     public String getMatriculaAutor(){
         return "19105708";
     }
 
     @Override
+    //Codifica a string passada por parâmetro
     public String codifica(String str){
         String codificada = "";
         for (char s : str.toCharArray()) {
@@ -33,6 +36,7 @@ public class Codifica19105708 implements Codifica {
     }
 
     @Override
+    //Decodifica a string passada por parâmetro
     public String decodifica(String str){
         String decodificada = "";
         for (char s : str.toCharArray()) {
