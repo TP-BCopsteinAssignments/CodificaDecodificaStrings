@@ -71,7 +71,7 @@ public class Codifica18200165 implements Codifica{
         for(int i = 0; i < str.length(); i++){
             messageVector[i] = ((int)str.charAt(i) - 32);
         }
-        //If the message has an even number "k" of characters, we can just encode it it k/2 times with the twoByTwo matrix. But in order to do this we must check if the length of the message is even!
+        //We repeat the encoding process but using the inverse matrix!
         if(messageVector.length % 2 == 0){
             for(int i = 0; i < messageVector.length; i = i+2){
                 //We create a coda 
@@ -80,7 +80,7 @@ public class Codifica18200165 implements Codifica{
             }
             return decodedMessage;
         }
-        //If the message has an odd number of characters, the last three characters will be encoded by the threeByThree matrix!
+        //Same as above
         for(int i = 0; i < messageVector.length - 3; i = i+2){
             int[] couple = {messageVector[i], messageVector[i+1]};
             decodedMessage = decodedMessage + partialEncode(couple, invTwoByTwo);
