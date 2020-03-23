@@ -1,6 +1,6 @@
 package Codificadores;
 
-public class Codifica19111140 implements Codifica {
+public class Codifica032614 implements Codifica {
     private static String tabela = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz@#";
     private static int deslc = 3;
 
