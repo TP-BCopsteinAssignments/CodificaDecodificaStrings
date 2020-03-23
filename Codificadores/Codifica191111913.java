@@ -1,3 +1,4 @@
+package Codificadores;
 
 public class Codifica191111913 implements Codifica {
     private static String tabela = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz@#";
