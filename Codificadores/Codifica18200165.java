@@ -50,7 +50,7 @@ public class Codifica18200165 implements Codifica{
             int[] couple = {messageVector[i], messageVector[i+1]};
             codedMessage = codedMessage + partialEncode(couple, twoByTwo);
         }
-        int[] triple = {messageVector[messageVector.length-1], messageVector[messageVector.length-2], messageVector[messageVector.length-3]};
+        int[] triple = {messageVector[messageVector.length-3], messageVector[messageVector.length-2], messageVector[messageVector.length-1]};
         codedMessage = codedMessage + partialEncode(triple, threeByThree);
         return codedMessage;
     }
@@ -85,7 +85,7 @@ public class Codifica18200165 implements Codifica{
             int[] couple = {messageVector[i], messageVector[i+1]};
             decodedMessage = decodedMessage + partialEncode(couple, invTwoByTwo);
         }
-        int[] triple = {messageVector[messageVector.length-1], messageVector[messageVector.length-2], messageVector[messageVector.length-3]};
+        int[] triple = {messageVector[messageVector.length-3], messageVector[messageVector.length-2], messageVector[messageVector.length-1]};
         decodedMessage = decodedMessage + partialEncode(triple, invThreeByThree);
         return decodedMessage;
     }
