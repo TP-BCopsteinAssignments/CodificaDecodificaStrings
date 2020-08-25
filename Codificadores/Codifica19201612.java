@@ -1,20 +1,15 @@
 package Codificadores;
 
 public class Codifica19201612 implements Codifica{
-    //private static String tabela = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz";
-    private static String vogais = "AEIOUaeiou";
 
     @Override
     public String codifica(String str){
-        StringBuilder codifica = new StringBuilder(str).reverse();
-        String codificada = codifica.toString();
-        return codificada;
-        
+        return new StringBuilder(str).reverse().toString();
     }
 
     @Override
     public String decodifica(String str){
-        return null;
+        return new StringBuilder(str).reverse().toString();
     }
 
     @Override

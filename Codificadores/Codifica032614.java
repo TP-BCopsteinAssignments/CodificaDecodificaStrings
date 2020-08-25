@@ -19,7 +19,7 @@ public class Codifica032614 implements Codifica {
                 }
             }
         }
-        return "aaaaaaaaaa";
+        return codificada;
     }
 
     @Override
