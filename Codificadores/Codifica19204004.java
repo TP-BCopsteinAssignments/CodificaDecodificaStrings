@@ -13,12 +13,17 @@ public class Codifica19204004 implements Codifica{
         String vetor[] = str.split(" ");
         String aux = "";
         for(int i=0; i<vetor.length;i++){
+            
+            if(i>4){
+                aux += vetor[i];
+            }
             if(i==vetor.length-1){
                 aux += ".";
             }
             else if(i>4){
-                aux += vetor[i] + " ";
+                aux += " ";
             }
+
         }
         aux = aux.toLowerCase();
         aux = aux.substring(0,1).toUpperCase().concat(aux.substring(1));
