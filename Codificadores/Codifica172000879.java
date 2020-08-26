@@ -1,5 +1,5 @@
 package Codificadores;
-public class Codificaca172000879 implements Codifica {
+public class Codifica172000879 implements Codifica {
     // Retorna o autor do codificador
     @Override
     public String getNomeAutor(){
