@@ -5,6 +5,16 @@ public class Codifica19201031 implements Codifica {
     private static int deslc = 4;
 
     @Override
+    public String getMatriculaAutor() {
+        return "19201031";
+    }
+
+    @Override
+    public String getNomeAutor() {
+        return "Fernando Giacomini";
+    }
+
+    @Override
     public String codifica(String str) {
         String c = "";
         for (char s : str.toCharArray()) {
@@ -32,13 +42,5 @@ public class Codifica19201031 implements Codifica {
         return dc;
     }
 
-    @Override
-    public String getMatriculaAutor() {
-        return "19201031";
-    }
-
-    @Override
-    public String getNomeAutor() {
-        return "Fernando Giacomini";
-    }
+    
 }
