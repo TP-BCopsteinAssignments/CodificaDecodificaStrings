@@ -4,12 +4,13 @@ public class Codifica19204004 implements Codifica{
     
     @Override
     public String codifica(String str){
-        return "Palmeiras nao tem mundial e "+ str.toUpperCase() + " e o Palmeiras nao tem mundial";
+        String aux = "Palmeiras nao tem mundial e "+ str.toUpperCase() + " e o Palmeiras nao tem mundial";
+        return aux;
     }
 
     @Override
     public String decodifica(String str){
-        return "Palmeiras nao tem mundial e "+ str.toUpperCase() + " e o Palmeiras nao tem mundial";
+        return str;
     }
 
     @Override
