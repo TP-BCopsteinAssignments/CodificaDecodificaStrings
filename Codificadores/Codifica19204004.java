@@ -18,7 +18,7 @@ public class Codifica19204004 implements Codifica{
                 aux += vetor[i];
             }
             if(i==vetor.length-1){
-                aux += ".";
+                aux += "";
             }
             else if(i>4){
                 aux += " ";
