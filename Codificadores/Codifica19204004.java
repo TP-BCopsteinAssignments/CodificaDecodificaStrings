@@ -22,7 +22,7 @@ public class Codifica19204004 implements Codifica{
         }
         aux = aux.toLowerCase();
         aux = aux.substring(0,1).toUpperCase().concat(aux.substring(1));
-        return str;
+        return aux;
     }
 
     @Override
