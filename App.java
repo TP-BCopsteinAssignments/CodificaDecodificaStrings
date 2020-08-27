@@ -8,6 +8,7 @@ import java.util.List;
 
 import Codificadores.Codifica;
 
+
 public class App {
     public static void executaCodificacao(Codifica cod, String frase) {
         System.out.println("Nome: " + cod.getNomeAutor());
@@ -20,6 +21,47 @@ public class App {
         System.out.println("----------------------------------");
     }
 
+    String getNomeAutor(){
+        return "Arthur Land Avila";
+    };
+
+    String getMatriculaAutor(){
+        return "18106098";
+    };
+
+    String codificada(String str){
+        char[] fraseChars = str.toCharArray();
+
+        for(int i=0; i<str.length(); i++) {
+            if ( fraseChars[i] == 'A' || fraseChars[i] == 'a') {
+                fraseChars[i] = '*';
+            }
+        }
+
+        String codifica = String.valueOf(fraseChars);
+
+        return str;
+    }
+
+    String decodifica(String str) {
+        char[] fraseChars = str.toCharArray();
+
+        for (int i = 0; i < str.length(); i++) {
+            if (fraseChars[i] == '*') {
+                if (i == 1) {
+                    fraseChars[i] = 'A';
+                }
+                else{
+                    fraseChars[i] = 'a';
+                }
+            }
+        }
+        String decodifica = String.valueOf(fraseChars);
+
+        return str;
+    }
+
+
     public static void main(String args[]) {
 
         Path filesPath = Paths.get("..", "Codificadores");
@@ -28,12 +70,12 @@ public class App {
 
         try (Stream<Path> walk = Files.walk(filesPath)) {
             codificadores = walk
-                .map(x -> x.getFileName())
-                .map(x -> x.toString())
-                .filter(f -> !f.endsWith("Codifica.java"))
-                .filter(f -> f.endsWith(".java"))
-                .map(s -> s.toString().substring(0, s.lastIndexOf('.')))
-                .collect(Collectors.toList());
+                    .map(x -> x.getFileName())
+                    .map(x -> x.toString())
+                    .filter(f -> !f.endsWith("Codifica.java"))
+                    .filter(f -> f.endsWith(".java"))
+                    .map(s -> s.toString().substring(0, s.lastIndexOf('.')))
+                    .collect(Collectors.toList());
 
             codificadores.forEach(fn -> System.out.println(fn));
 
