@@ -12,26 +12,28 @@ public String codifica(String str){
     for (int i=0 ; i<tabela.length(); i++){
       int mod = i%2;
       //char ch = tabela.charAt(i);
-      if (mod == 0){
-        tabela.charAt(i+2);
-        cod += tabela.charAt(i);
+      if(mod == 0 && i+2 < tabela.length()){
+       // tabela.charAt(i+2);
+        cod += tabela.charAt(i+2);
     } 
-      else 
+}
+     /* else 
       {
           tabela.charAt(i+4);
           cod += tabela.charAt(i);
-         /* if (tabela.charAt(i) >= tabela.length()) {
+          if (tabela.charAt(i) >= tabela.length()) {
             int pos = Math.floorMod((i+2), tabela.length()); //floorMod positivo(sinal)
             cod += tabela.charAt(i);
         }
       }
      //return cod;
 }*/
-    }
     
-  }
+    
+  
   return cod;
 }
+
 
 
 @Override
@@ -40,22 +42,22 @@ public String decodifica(String str){
     for(int i=0; i<tabela.length(); i++){
        //char ch = tabela.charAt(i);
        int mod = i%2;
-       if(mod == 0){
-            tabela.charAt(i-2);
+       if(mod == 0 && i+2 >= 2){
+            //tabela.charAt(i-2);
             dec += tabela.charAt(i); 
         }
-       else 
+      /* else 
         {
           tabela.charAt(i-4);
           dec += tabela.charAt(i);
-          /*for (i = 0; i < tabela.length(); i++) {
+          for (i = 0; i < tabela.length(); i++) {
             if (tabela.charAt(i) >= tabela.length()) {
                 int pos = Math.floorMod((i-2), tabela.length());
                 dec += tabela.charAt(pos);
        }*/
 
      //return dec;
-    }
+    
   
     
     
